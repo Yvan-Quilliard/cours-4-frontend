@@ -19,12 +19,12 @@ permissions:
 
 jobs:
   hello:
-    name: Echo Hello World
+    name: Test echo Hello World
     runs-on: ubuntu-latest
     steps:
       - run: echo Hello World
   test:
-    name: Test
+    name: Start unit tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
