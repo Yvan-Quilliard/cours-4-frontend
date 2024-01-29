@@ -34,3 +34,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - run: npm run test
+        with:
+          VITE_APP_NAME: ${{ env.VITE_APP_NAME }}
