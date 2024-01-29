@@ -1,5 +1,5 @@
 import { setActivePinia, createPinia } from 'pinia'
-import { describe, it, beforeEach } from 'vitest'
+import { describe, it, beforeEach, expect } from 'vitest'
 // import { useCounterStore } from '@/stores/counter'
 
 describe('Counter Store', () => {
@@ -11,8 +11,14 @@ describe('Counter Store', () => {
   })
 
   it('increments', () => {
+    const store = useCounterStore()
+    store.increment()
+    expect(store.count).toBe(1)
   })
 
   it('decrements', () => {
+    const store = useCounterStore()
+    store.decrement()
+    expect(store.count).toBe(-1)
   })
 })
