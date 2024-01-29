@@ -24,7 +24,7 @@ jobs:
     steps:
       - run: echo Hello World
   test:
-    name: Start unit tests
+    name: Build, format, lint, and test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -35,9 +35,9 @@ jobs:
         run: npm ci
       - name: Run linter
         run: npm run lint
-      - name: Fix linter errors
-        run: npm run lint
       - name: Run tests
         run: npm run test
         env:
           VITE_APP_NAME: ${{ env.VITE_APP_NAME }}
+      - name: Build assets
+        run: npm run build
