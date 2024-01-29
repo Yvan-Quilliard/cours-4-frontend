@@ -23,4 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo Hello World
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Test
       - run: npm run test
